@@ -26,7 +26,7 @@ docker run --rm -it \
   --network "${network}" \
   "${docker_image}" \
   clients create --skip-tls-verify \
-    --id reaction-meteor-ui \
+    --id reaction-next-starterkit \
     --secret CHANGEME \
     --grant-types authorization_code,refresh_token,client_credentials,implicit \
     --response-types token,code,id_token \
