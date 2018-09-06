@@ -1,0 +1,72 @@
+version: '3'
+
+networks:
+  auth:
+    external:
+      name: auth.reaction.localhost
+
+services:
+
+  hydra-migrate:
+    image: oryd/hydra:v1.0.0-beta.9-alpine
+    command: migrate sql -e
+    depends_on:
+      - postgres
+    environment:
+#      - LOG_LEVEL=debug
+      - DATABASE_URL=postgres://hydra:changeme@postgres:5432/hydra?sslmode=disable
+    restart: on-failure
+
+  hydra:
+    image: oryd/hydra:v1.0.0-beta.9-alpine
+    command: serve all --dangerous-force-http
+    depends_on:
+      - hydra-migrate
+      - postgres
+#     Uncomment the following line to use mysql instead.
+#      - mysqld:mysqld
+    networks:
+      default:
+      auth:
+    ports:
+      # Public port
+      - "4444:4444"
+      # Admin port
+      - "4445:4445"
+      # Port for hydra token user
+      - "5555:5555"
+    environment:
+#      - LOG_LEVEL=debug
+      - OAUTH2_ISSUER_URL=http://localhost:4444
+      - OAUTH2_CONSENT_URL=http://localhost:3000/consent
+      - OAUTH2_LOGIN_URL=http://localhost:3000/login
+      - DATABASE_URL=postgres://hydra:changeme@postgres:5432/hydra?sslmode=disable
+#     Uncomment the following line to use mysql instead.
+#      - DATABASE_URL=mysql://root:secret@tcp(mysqld:3306)/mysql?parseTime=true
+      - SYSTEM_SECRET=youReallyNeedToChangeThis
+      - OAUTH2_SHARE_ERROR_DEBUG=1
+      - OIDC_SUBJECT_TYPES_SUPPORTED=public,pairwise
+      - OIDC_SUBJECT_TYPE_PAIRWISE_SALT=youReallyNeedToChangeThis
+#     - OAUTH2_ACCESS_TOKEN_STRATEGY=jwt
+    restart: unless-stopped
+
+  postgres:
+    image: postgres:10.3
+    environment:
+      - POSTGRES_USER=hydra
+      - POSTGRES_PASSWORD=changeme
+      - POSTGRES_DB=hydra
+    ports:
+      - 5432
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+
+#  Uncomment the following section to use mysql instead.
+#  mysqld:
+#    image: mysql:5.7
+#    environment:
+#      - MYSQL_ROOT_PASSWORD=secret
+#
+
+volumes:
+  postgres-data:
