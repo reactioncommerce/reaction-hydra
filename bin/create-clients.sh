@@ -31,5 +31,5 @@ docker run --rm -it \
     --grant-types authorization_code,refresh_token,client_credentials,implicit \
     --response-types token,code,id_token \
     --scope openid,offline \
-    --callbacks http://localhost:3000/callback \
+    --callbacks http://localhost:4000/callback \
   || echo "Failed to create OAuth2 client 'reaction-next-starterkit'"
