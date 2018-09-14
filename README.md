@@ -1,4 +1,8 @@
-[ORY Hydra][hydra] OAuth2 token server. Ready for Reaction development.
+Reaction Commerce uses the [ORY Hydra][hydra] OAuth 2.0 & OpenID Connect
+server, for authentication.
+
+This project provides a configured Hydra installation using Docker Compose.
+Ready for Reaction development.
 
 ### Part of the Reaction Platform
 
@@ -13,11 +17,12 @@ installation.
 
 ## Project Status
 
-This project is experimental.
+This project is supported by Reaction Commerce for local Reaction development.
+It is not intended to serve as a template for running Hydra in production.
 
-* :warning: Not yet suitable for local development
+* :white_check_mark: Suitable for local development
 * :warning: Contains specific configuration for the Reaction Platform.
-* :boom: Not intended for production.
+* :boom: Not safe for production.
 
 ## Services
 
