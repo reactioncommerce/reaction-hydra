@@ -1,6 +1,7 @@
 This directory contains project hooks for the Reaction development environment.
-They are invoked from the reaction-next build tools which operate across all
-projects to aid with orchestration.
+They are invoked from the [reaction-platform][reaction-platform] build tools
+which operate across all projects to aid with orchestration in the local
+development environment.
 
 These hooks provide means for developers of an application to ensure that the
 application configure itself without higher-level coordination outside of the
@@ -39,3 +40,5 @@ a task.
 
 It is better to create a script in your project and call it from the hook. This
 keeps the scripted action reusable and available outside of the hook context.
+
+[reaction-platform]: https://github.com/reactioncommerce.com/reaction-platform
