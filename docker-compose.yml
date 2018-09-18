@@ -17,6 +17,21 @@ services:
       - DATABASE_URL=postgres://hydra:changeme@postgres:5432/hydra?sslmode=disable
     restart: on-failure
 
+  hydra-clients:
+    image: oryd/hydra:v1.0.0-beta.9-alpine
+    entrypoint: /bin/sh
+    depends_on:
+      - hydra
+    environment:
+      HYDRA_HOST: hydra.auth.reaction.localhost
+      HYDRA_ADMIN_PORT: 4445
+      HYDRA_ADMIN_URL: http://hydra.auth.reaction.localhost:4445
+      HYDRA_CLIENT_SECRET:
+    restart: never
+    networks:
+      default:
+      auth:
+
   hydra:
     image: oryd/hydra:v1.0.0-beta.9-alpine
     command: serve all --dangerous-force-http
@@ -60,6 +75,7 @@ services:
       - 5432
     volumes:
       - postgres-data:/var/lib/postgresql/data
+
 
 #  Uncomment the following section to use mysql instead.
 #  mysqld:

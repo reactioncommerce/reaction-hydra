@@ -12,25 +12,34 @@
 
 __dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-docker_image=oryd/hydra:v1.0.0-beta.9-alpine
-network=auth.reaction.localhost
-hydra_admin_port=4445
-hydra_admin_url=http://hydra.${network}:${hydra_admin_port}
-
-# Logs a warning and fails silently for now. Hydra doesn't support updating
-# with this command.
-docker run --rm -it \
-  --network "${network}" \
-  --volume "${__dir}/wait-for-it.sh:/usr/local/bin/wait-for-it.sh" \
-  -e "HYDRA_ADMIN_URL=${hydra_admin_url}" \
-  --network "${network}" \
-  "${docker_image}" \
-  clients create --skip-tls-verify \
-    --id reaction-next-starterkit \
-    --secret CHANGEME \
-    --grant-types authorization_code,refresh_token,client_credentials,implicit \
-    --token-endpoint-auth-method client_secret_post \
-    --response-types token,code,id_token \
-    --scope openid,offline \
-    --callbacks http://localhost:4000/callback \
-  || echo "Failed to create OAuth2 client 'reaction-next-starterkit'"
+docker-compose run --rm \
+  --volume "${__dir}/wait-for.sh:/usr/local/bin/wait-for.sh" \
+  hydra-clients <<'EOF'
+set -e
+/usr/local/bin/wait-for.sh "${HYDRA_HOST}:${HYDRA_ADMIN_PORT}"
+# Want to check stderr on failure of the next command so +e
+set +e
+hydra clients create --skip-tls-verify \
+  --id reaction-next-starterkit \
+  --secret "${HYDRA_CLIENT_SECRET-CHANGEME}" \
+  --grant-types authorization_code,refresh_token,client_credentials,implicit \
+  --token-endpoint-auth-method client_secret_post \
+  --response-types token,code,id_token \
+  --scope openid,offline \
+  --callbacks http://localhost:4000/callback 2>/tmp/clients-create-stderr
+exit_code=$?
+case ${exit_code} in
+0)
+  echo SUCCESS: hydra client created
+  ;;
+*)
+  if grep 409 /tmp/clients-create-stderr >/dev/null; then
+    echo SUCCESS: hydra client already exists
+  else
+    echo ERROR: creating hydra client 1>&2
+    cat /tmp/clients-create-stderr 1>&2
+    exit ${exit_code}
+  fi
+  ;;
+esac
+EOF
