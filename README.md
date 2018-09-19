@@ -7,7 +7,7 @@ Ready for Reaction development.
 ### Part of the Reaction Platform
 
 This application is a part of the Reaction Platform and is designed to work
-with other services. You can launch Reaction and it's dependencies with a
+with other services. You can launch Reaction and its dependencies with a
 single command by using the [Reaction Platform][reaction-platform] development
 installation.
 
