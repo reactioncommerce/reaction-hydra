@@ -12,13 +12,23 @@
 
 __dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-docker-compose run --rm \
+docker_image="oryd/hydra:v1.0.0-beta.9-alpine"
+network="auth.reaction.localhost"
+hydra_host="hydra.${network}"
+hydra_admin_port="4445"
+hydra_admin_url="http://${hydra_host}:${hydra_admin_port}"
+docker run --rm \
+  --interactive \
   --volume "${__dir}/wait-for.sh:/usr/local/bin/wait-for.sh" \
-  hydra-clients <<'EOF'
-set -e
+  --network "${network}" \
+  --env "HYDRA_HOST=${hydra_host}" \
+  --env "HYDRA_ADMIN_PORT=${hydra_admin_port}" \
+  --env "HYDRA_ADMIN_URL=${hydra_admin_url}" \
+  --env "HYDRA_CLIENT_SECRET" \
+  --network "${network}" \
+  --entrypoint sh \
+  "${docker_image}" <<'EOF'
 /usr/local/bin/wait-for.sh "${HYDRA_HOST}:${HYDRA_ADMIN_PORT}"
-# Want to check stderr on failure of the next command so +e
-set +e
 hydra clients create --skip-tls-verify \
   --id reaction-next-starterkit \
   --secret "${HYDRA_CLIENT_SECRET-CHANGEME}" \
