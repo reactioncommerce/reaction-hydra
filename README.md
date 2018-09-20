@@ -42,7 +42,7 @@ These services will be available when the project is started:
 
 Copyright © Reaction Commerce
 
-[ory/hydra][hydra] is licensed under
+[Ory/Hydra][hydra] is licensed under
 [Apache License 2.0](https://github.com/ory/hydra/blob/master/LICENSE)
 
-[hydra]: https://github/ory/hydra
+[hydra]: https://github.com/ory/hydra
