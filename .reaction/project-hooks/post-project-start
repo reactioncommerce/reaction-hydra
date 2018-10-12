@@ -19,13 +19,8 @@
 #  - It is good practice to keep this script lightweight and invoke setup
 #    scripts in your project.
 
-#__current_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+__current_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 __root_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 __root_name=$(basename "${__root_dir}")
 
 echo "${__root_name} post-project-start script invoked." 2>&1
-
-# TODO: Consider moving the oauth client creation to post-system-start in the
-#       projects they represent.
-echo "Creating development OAuth clients for ${__root_name}"
-"${__root_dir}/bin/create-clients.sh"
