@@ -1,3 +1,7 @@
+# v2.1.0
+
+This is a minor version change keep this projects versioning coordinated with [Reaction Platform](https://github.com/reactioncommerce/reaction-platform), [Reaction](https://github.com/reactioncommerce/reaction), and our [Example Storefront](https://github.com/reactioncommerce/example-storefront).
+
 # v2.0.0
 This is our first release of Reaction Platform using [ORY Hydra](https://github.com/ory/hydra)
 
