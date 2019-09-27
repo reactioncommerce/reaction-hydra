@@ -8,7 +8,7 @@ networks:
 services:
 
   hydra-migrate:
-    image: oryd/hydra:v1.0.0-beta.9-alpine
+    image: oryd/hydra:latest
     command: migrate sql -e
     depends_on:
       - postgres
@@ -16,7 +16,7 @@ services:
     restart: on-failure
 
   hydra:
-    image: oryd/hydra:v1.0.0-beta.9-alpine
+    image: oryd/hydra:latest
     command: serve all --dangerous-force-http
     depends_on:
       - hydra-migrate
