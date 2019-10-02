@@ -1,30 +1,30 @@
 # v2.6.0
 
-This is a minor version update to keep this projects versioning coordinated with [Reaction Platform](https://github.com/reactioncommerce/reaction-platform), [Reaction](https://github.com/reactioncommerce/reaction), and our [Example Storefront](https://github.com/reactioncommerce/example-storefront).
+This is a minor version update to keep these projects versioning coordinated with [Reaction Platform](https://github.com/reactioncommerce/reaction-platform), [Reaction](https://github.com/reactioncommerce/reaction), and our [Example Storefront](https://github.com/reactioncommerce/example-storefront).
 
 # v2.5.0
 
-This is a minor version update to keep this projects versioning coordinated with [Reaction Platform](https://github.com/reactioncommerce/reaction-platform), [Reaction](https://github.com/reactioncommerce/reaction), and our [Example Storefront](https://github.com/reactioncommerce/example-storefront).
+This is a minor version update to keep these projects versioning coordinated with [Reaction Platform](https://github.com/reactioncommerce/reaction-platform), [Reaction](https://github.com/reactioncommerce/reaction), and our [Example Storefront](https://github.com/reactioncommerce/example-storefront).
 
 # v2.4.0
 
-This is a minor version update to keep this projects versioning coordinated with [Reaction Platform](https://github.com/reactioncommerce/reaction-platform), [Reaction](https://github.com/reactioncommerce/reaction), and our [Example Storefront](https://github.com/reactioncommerce/example-storefront).
+This is a minor version update to keep these projects versioning coordinated with [Reaction Platform](https://github.com/reactioncommerce/reaction-platform), [Reaction](https://github.com/reactioncommerce/reaction), and our [Example Storefront](https://github.com/reactioncommerce/example-storefront).
 
 # v2.3.0
 
-This is a minor version update to keep this projects versioning coordinated with [Reaction Platform](https://github.com/reactioncommerce/reaction-platform), [Reaction](https://github.com/reactioncommerce/reaction), and our [Example Storefront](https://github.com/reactioncommerce/example-storefront).
+This is a minor version update to keep these projects versioning coordinated with [Reaction Platform](https://github.com/reactioncommerce/reaction-platform), [Reaction](https://github.com/reactioncommerce/reaction), and our [Example Storefront](https://github.com/reactioncommerce/example-storefront).
 
 # v2.2.1
 
-This is a patch version change keep this projects versioning coordinated with [Reaction Platform](https://github.com/reactioncommerce/reaction-platform), [Reaction](https://github.com/reactioncommerce/reaction), and our [Example Storefront](https://github.com/reactioncommerce/example-storefront).
+This is a patch version change keep these projects versioning coordinated with [Reaction Platform](https://github.com/reactioncommerce/reaction-platform), [Reaction](https://github.com/reactioncommerce/reaction), and our [Example Storefront](https://github.com/reactioncommerce/example-storefront).
 
 # v2.2.0
 
-This is a minor version change keep this projects versioning coordinated with [Reaction Platform](https://github.com/reactioncommerce/reaction-platform), [Reaction](https://github.com/reactioncommerce/reaction), and our [Example Storefront](https://github.com/reactioncommerce/example-storefront).
+This is a minor version change keep these projects versioning coordinated with [Reaction Platform](https://github.com/reactioncommerce/reaction-platform), [Reaction](https://github.com/reactioncommerce/reaction), and our [Example Storefront](https://github.com/reactioncommerce/example-storefront).
 
 # v2.1.0
 
-This is a minor version change keep this projects versioning coordinated with [Reaction Platform](https://github.com/reactioncommerce/reaction-platform), [Reaction](https://github.com/reactioncommerce/reaction), and our [Example Storefront](https://github.com/reactioncommerce/example-storefront).
+This is a minor version change keep these projects versioning coordinated with [Reaction Platform](https://github.com/reactioncommerce/reaction-platform), [Reaction](https://github.com/reactioncommerce/reaction), and our [Example Storefront](https://github.com/reactioncommerce/example-storefront).
 
 # v2.0.0
 This is our first release of Reaction Platform using [ORY Hydra](https://github.com/ory/hydra)
