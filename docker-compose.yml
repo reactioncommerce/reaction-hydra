@@ -9,7 +9,7 @@ services:
 
   hydra-migrate:
     image: oryd/hydra:latest
-    command: migrate sql -e
+    command: migrate sql -e -y
     depends_on:
       - postgres
     env_file: ".env"
