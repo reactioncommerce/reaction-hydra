@@ -1,3 +1,7 @@
+# v2.8.0
+
+This is a minor version update to keep this project's versioning coordinated with [Reaction Platform](https://github.com/reactioncommerce/reaction-platform), [Reaction](https://github.com/reactioncommerce/reaction), and our [Example Storefront](https://github.com/reactioncommerce/example-storefront).
+
 # v2.7.0
 
 This is a minor version update to keep this project's versioning coordinated with [Reaction Platform](https://github.com/reactioncommerce/reaction-platform), [Reaction](https://github.com/reactioncommerce/reaction), and our [Example Storefront](https://github.com/reactioncommerce/example-storefront).
