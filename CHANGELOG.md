@@ -4,6 +4,10 @@ This is a major update to keep this project in sync with [reaction
 v3.0.0-alpha](https://github.com/reactioncommerce/reaction), [example-storefront
 v3.0.0-alpha](https://github.com/reactioncommerce/example-storefront) and [reaction-platform v3.0.0-alpha](https://github.com/reactioncommerce/reaction-platform).
 
+# v2.9.1
+
+This is a patch update to keep this project in sync with [reaction v2.9.1](https://github.com/reactioncommerce/reaction), [example-storefront v2.9.1](https://github.com/reactioncommerce/example-storefront) and [reaction-platform v2.9.1](https://github.com/reactioncommerce/reaction-platform).
+
 # v2.9.0
 
 This is a minor update to keep this project in sync with [reaction v2.9.0](https://github.com/reactioncommerce/reaction), [example-storefront v2.9.0](https://github.com/reactioncommerce/example-storefront) and [reaction-platform v2.9.0](https://github.com/reactioncommerce/reaction-platform).
