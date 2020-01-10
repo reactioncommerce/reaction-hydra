@@ -1,3 +1,9 @@
+# v3.0.0-alpha.2
+
+## Features
+
+- feat: add URL for identity error page [#42](https://github.com/reactioncommerce/reaction-hydra/pull/42)
+
 # v3.0.0-alpha
 
 This is a major update to keep this project in sync with [reaction
