@@ -1,9 +1,9 @@
-version: '3'
+version: '3.4'
 
 networks:
-  auth:
+  reaction:
     external:
-      name: auth.reaction.localhost
+      name: reaction.localhost
 
 services:
 
@@ -23,7 +23,7 @@ services:
       - postgres
     networks:
       default:
-      auth:
+      reaction:
     ports:
       # Public port
       - "4444:4444"
@@ -40,6 +40,9 @@ services:
       - POSTGRES_USER=hydra
       - POSTGRES_PASSWORD=changeme
       - POSTGRES_DB=hydra
+    networks:
+      default:
+      reaction:
     ports:
       - 5432
     volumes:
