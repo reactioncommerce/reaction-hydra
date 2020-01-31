@@ -12,6 +12,9 @@ services:
     command: migrate sql -e -y
     depends_on:
       - postgres
+    networks:
+      default:
+      reaction:
     env_file: ".env"
     restart: on-failure
 
