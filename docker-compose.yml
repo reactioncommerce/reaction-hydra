@@ -1,9 +1,9 @@
-version: '3'
+version: '3.4'
 
 networks:
-  auth:
+  reaction:
     external:
-      name: auth.reaction.localhost
+      name: reaction.localhost
 
 services:
 
@@ -12,6 +12,9 @@ services:
     command: migrate sql -e -y
     depends_on:
       - postgres
+    networks:
+      default:
+      reaction:
     env_file: ".env"
     restart: on-failure
 
@@ -23,7 +26,7 @@ services:
       - postgres
     networks:
       default:
-      auth:
+      reaction:
     ports:
       # Public port
       - "4444:4444"
@@ -40,6 +43,9 @@ services:
       - POSTGRES_USER=hydra
       - POSTGRES_PASSWORD=changeme
       - POSTGRES_DB=hydra
+    networks:
+      default:
+      reaction:
     ports:
       - 5432
     volumes:
