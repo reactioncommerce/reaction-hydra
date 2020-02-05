@@ -30,37 +30,9 @@ This is the v3.0.0 release of `reaction-hydra`, designed to work with v3.0.0 of 
 
 *After this release, Reaction releases will no longer be coordinated across all projects - we'll release each project independently, as needed. This means version numbers will no longer be in sync. The newest versions of each project will work together.*
 
-# v3.0.0-beta.2
+# v2.9.1
 
-This is the second beta release of the Reaction Hydra project that is designed to work with our new Reaction API.
-
-*Reaction releases will no longer be coordinated across all projects - we'll release each project, independently, as needed. This means version numbers will no longer be in sync. The newest versions of each project will work together. This change has two exceptions: we will release all projects in coordination for a `beta` release, and all projects in coordination for the official `v3.0.0` release.*
-
-## Chores
-
-- chore: reconfigure docker-compose networks [#46](https://github.com/reactioncommerce/reaction-hydra/pull/46)
-
-# v3.0.0-beta
-
-This is the beta release of the Reaction Hydra project that is designed to work with our new Reaction API.
-
-*Reaction releases will no longer be coordinated across all projects - we'll release each project, independently, as needed. This means version numbers will no longer be in sync. The newest versions of each project will work together. This change has two exceptions: we will release all projects in coordination for a `beta` release, and all projects in coordination for the official `v3.0.0` release.*
-
-## Features
-
-- feat: add URL for identity error page [#42](https://github.com/reactioncommerce/reaction-hydra/pull/42)
-
-# v3.0.0-alpha.2
-
-## Features
-
-- feat: add URL for identity error page [#42](https://github.com/reactioncommerce/reaction-hydra/pull/42)
-
-# v3.0.0-alpha
-
-This is a major update to keep this project in sync with [reaction
-v3.0.0-alpha](https://github.com/reactioncommerce/reaction), [example-storefront
-v3.0.0-alpha](https://github.com/reactioncommerce/example-storefront) and [reaction-platform v3.0.0-alpha](https://github.com/reactioncommerce/reaction-platform).
+This is a patch update to keep this project in sync with [reaction v2.9.1](https://github.com/reactioncommerce/reaction), [example-storefront v2.9.1](https://github.com/reactioncommerce/example-storefront) and [reaction-platform v2.9.1](https://github.com/reactioncommerce/reaction-platform).
 
 # v2.9.0
 
