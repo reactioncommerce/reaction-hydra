@@ -1,3 +1,35 @@
+# v3.0.0
+
+This is the v3.0.0 release of `reaction-hydra`, designed to work with v3.0.0 of the Reaction API.
+
+## Features
+
+- feat: add URL for identity error page [#42](https://github.com/reactioncommerce/reaction-hydra/pull/42)
+
+## Chores
+
+- chore: reconfigure docker-compose networks [#46](https://github.com/reactioncommerce/reaction-hydra/pull/46)
+
+## Notes
+
+*These changes were originally tested and released in our alpha and beta releases*
+
+- [v3.0.0-beta.2](https://github.com/reactioncommerce/reaction-hydra/releases/tag/v3.0.0-beta.2)
+- [v3.0.0-beta](https://github.com/reactioncommerce/reaction-hydra/releases/tag/v3.0.0-beta)
+- [v3.0.0-alpha.2](https://github.com/reactioncommerce/reaction-hydra/releases/tag/v3.0.0-alpha.2)
+- [v3.0.0-alpha](https://github.com/reactioncommerce/reaction-hydra/releases/tag/v3.0.0-alpha)
+
+*The following Reaction projects are being released one time in coordination as v3.0.0*
+
+- [Reaction API](https://github.com/reactioncommerce/reaction)
+- [Reaction Hydra](https://github.com/reactioncommerce/reaction-hydra)
+- [Reaction Identity](https://github.com/reactioncommerce/reaction-identity)
+- [Reaction Admin (beta)](https://github.com/reactioncommerce/reaction-admin)
+- [Example Storefront](https://github.com/reactioncommerce/example-storefront)
+- [Reaction Development Platform](https://github.com/reactioncommerce/reaction-development-platform)
+
+*After this release, Reaction releases will no longer be coordinated across all projects - we'll release each project independently, as needed. This means version numbers will no longer be in sync. The newest versions of each project will work together.*
+
 # v3.0.0-beta.2
 
 This is the second beta release of the Reaction Hydra project that is designed to work with our new Reaction API.
