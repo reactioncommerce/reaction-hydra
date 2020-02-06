@@ -1,29 +1,32 @@
-version: '3'
+version: '3.4'
 
 networks:
-  auth:
+  reaction:
     external:
-      name: auth.reaction.localhost
+      name: reaction.localhost
 
 services:
 
   hydra-migrate:
-    image: oryd/hydra:v1.0.0-beta.9-alpine
-    command: migrate sql -e
+    image: oryd/hydra:v1.0.8
+    command: migrate sql -e -y
     depends_on:
       - postgres
+    networks:
+      default:
+      reaction:
     env_file: ".env"
     restart: on-failure
 
   hydra:
-    image: oryd/hydra:v1.0.0-beta.9-alpine
+    image: oryd/hydra:v1.0.8
     command: serve all --dangerous-force-http
     depends_on:
       - hydra-migrate
       - postgres
     networks:
       default:
-      auth:
+      reaction:
     ports:
       # Public port
       - "4444:4444"
@@ -40,6 +43,9 @@ services:
       - POSTGRES_USER=hydra
       - POSTGRES_PASSWORD=changeme
       - POSTGRES_DB=hydra
+    networks:
+      default:
+      reaction:
     ports:
       - 5432
     volumes:
