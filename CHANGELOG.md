@@ -2,6 +2,10 @@
 
 This is a patch update to keep this project in sync with [reaction v2.9.3](https://github.com/reactioncommerce/reaction), [example-storefront v2.9.3](https://github.com/reactioncommerce/example-storefront) and [reaction-platform v2.9.3](https://github.com/reactioncommerce/reaction-platform).
 
+## Reaction v2 EOL
+
+This is the final release of Reaction v2 software. As of September 1, 2020, Reaction v2 is no longer supported. We encourage everyone to upgrade to Reaction v3. Please see the [Upgrading from 2.x](https://docs.reactioncommerce.com/docs/upgrading) guide in our docs.
+
 # v2.9.2
 
 This is a patch update to keep this project in sync with [reaction v2.9.2](https://github.com/reactioncommerce/reaction), [example-storefront v2.9.2](https://github.com/reactioncommerce/example-storefront) and [reaction-platform v2.9.2](https://github.com/reactioncommerce/reaction-platform).
